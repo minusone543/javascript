@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 1-1</title>
+    <script>
+        // 자바스크립트 사용 방법
+        // 1. inline 방식
+            // html 태그에 직접 소스 코드 입력
+        // 2. script 태그 사용
+            // html 문서 내에 <script> 태그 사용 후 소스 코드 입력
+        // 3. 외부 자바스크립트 파일 로드
+            // 확장자 명이 js 인 파일 생성 후 해당 파일에 소스 코드 입력
+    function over(obj) {
+        obj.src = "./images/pen02.jpg";
+    }
+
+    function out(obj) {
+        obj.src = "./images/pen03.jpg";
+    }
+    </script>
+
+    <!-- <script src="lib.js"></script> -->
+</head>
+<body>
+    <h3>javascript 사용 방법</h3>
+    <!-- 1번 방식 -->
+    <h4>script 태그 사용 방식 1번</h4>
+    <img src="./images/pen01.jpg" width="200px" height="200px" alt="" onmouseover="this.src='../images/pen02.jpg'" onmouseout="this.src='../images/pen03.jpg'">
+
+    <br><hr><br>
+    <!-- 2번 방식 -->
+    <h4>script 태그 사용 방식 2번</h4>
+    <img src="./images/pen01.jpg" width="200px" height="200px" alt="" onmouseover="over(this)" onmouseout="out(this)">
+
+    <br><hr><br>
+
+    <h4>외부 자바 스크립트 파일 로딩 1</h4>
+    <h3>마우스를 올려보세요</h3>
+    <img src="./images/pen01.jpg" width="200px" height="200px" alt="" onmouseover="over2(this)" onmouseout="out2(this)">
+    
+    <br><hr><br>
+
+    <h4>외부 자바 스크립트 파일 로딩 2</h4>
+    <img id="img4" src="./images/pen01.jpg" width="200px" height="200px" alt="">
+
+
+    <br><hr><br>
+
+    <h4>script 태그 사용 방식 3번</h4>
+    <img id="img3" src="./images/pen01.jpg" alt="">
+    <script>
+        var img3 = document.getElementById("img3");
+
+        img3.addEventListener("mouseover", function() {
+            img3.src = "images/pen02.jpg"
+        });
+        img3.addEventListener("mouseout", function() {
+            img3.src = "images/pen03.jpg"
+        });
+    </script>
+
+    <script src="lib.js"></script>
+    <br><hr><br>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

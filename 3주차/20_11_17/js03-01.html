@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 3-1</title>
+    <script>
+        var fruits = "바나나";
+        var price = 0;
+
+        switch (fruits) {
+            case "바나나":
+            price = 200;
+            break;
+
+            case "사과":
+            price = 300;
+            break;
+            
+            case "체리":
+            price = 400;
+            break;
+            
+            default:
+            console.log("팔지 않습니다.");
+            price = 0;
+        }
+
+        console.log(price);
+
+
+        console.log("-----------------");
+
+        fruits = "사과";
+        price = 0;
+
+        if (fruits == "바나나") {
+            price = 200;
+        }
+        else if (fruits == "사과") {
+            price = 300;
+        }
+        else if (fruits == "체리") {
+            price = 400;
+        }
+        else {
+            console.log("팔지 않습니다.");
+            price = 0;
+        }
+
+        console.log(price);
+
+        console.log("-----------------");
+
+        var day = new Date().getDay();
+        var toDay = "";
+
+        switch (day) {
+            case 1:
+            toDay = "월요일";
+            break;
+            
+            case 2:
+            toDay = "화요일";
+            break;
+
+            case 3:
+            toDay = "수요일";
+            break;
+
+            case 4:
+            toDay = "목요일";
+            break;
+
+            case 5:
+            toDay = "금요일";
+            break;
+
+            default:
+            toDay = "주말";
+            break;
+        }
+
+        console.log("오늘은 " +toDay+"입니다.");
+        console.log("-----------------");
+
+        // 문제 1) 위의 요일 입력하는 부분을 사용자가 날짜를 입력하면 해당하는 요일이 출력되는 프로그램을 작성하세요
+        // else if 문으로 작성하세요
+        // 사용자 입력 방식 "2020-11-17"
+        var td = prompt ("날짜를 입력하세요.", "2020-11-17");
+        var td1 = new Date(td).getDay();
+
+
+        if (td1 == 1) {
+            console.log(td+" 는 월요일 입니다.");
+        }
+        else if (td1 == 2){
+            console.log(td+" 는 화요일 입니다.");
+        }
+        else if (td1 == 3){
+            console.log(td+" 는 수요일 입니다.");
+        }
+        else if (td1 == 4){
+            console.log(td+" 는 목요일 입니다.");
+        }
+        else if (td1 == 5){
+            console.log(td+" 는 금요일 입니다.");
+        }
+        else if (td1 == 6){
+            console.log(td+" 는 토요일 입니다.");
+        }
+        else if (td1 == 7){
+            console.log(td+" 는 일요일 입니다.");
+        }
+        else {
+            console.log("입력하신 문자는 "+td+ " 입니다. 날짜를 다시 입력해주세요.");
+        }
+
+        
+        console.log("-----------------");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

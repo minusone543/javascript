@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 3-2</title>
+    <script>
+        // 반복문
+        // for (for ~in), while, do ~ while
+        // 자바스크립트에서 특정한 코드블럭을 반복적으로 실행할 때 사용하는 명령어
+        // for 문: 반복 조건이 거짓으로 판단될 때까지 코드블럭을 반복 실행하는 반복문
+        // 초기화변수, 반복조건, 변수의 카운트까지 한곳에 입력하여 설정하는 방식
+        // for (초기화변수; 반복조건; 변수카운트) {
+        //     반복 실행될 소스 코드;
+        //  }
+        for (var i = 0; i< 10; i++ ){
+            console.log(i);
+        }
+
+        console.log("-----------------");
+
+        var result = 0;
+
+        for (var i = 0; i <= 10; i++ ){
+            result = result + i;    
+        }
+
+        console.log(result);
+
+
+        console.log("-----------------");
+
+        for (var size =10; size <=35; size += 5) {
+            document.write("<span ");
+            document.write(" style='font-size:"+ size + "px'>");
+            document.write(size + "px");
+            document.write("</span> ");
+        }
+        console.log("-----------------");
+        var dan =5;
+        for (var i = 1; i < 10; i++) {
+            console.log(dan + " * " + i + " = " +(dan * i));
+        }
+        console.log("-----------------");
+        // var j = "*"
+        // var k = ""
+        // var r = ""
+        // for (i = 0; i < 5; i++) {
+        //     k = k + j
+        //     if (i < 3){
+        //         console.log(k);
+        //     }
+        //     else if (i == 3 ){
+        //         r = k.replace("**","");
+        //         console.log(r);
+        //     }
+        //     else {
+        //         r = k.replace("****","");
+        //         console.log(r);
+        //     }
+
+        // }
+
+        var j = "*"
+        var k = ""
+        for (i = 0; i < 5; i++) {
+            k = k + j
+            console.log(k);
+        }
+        
+        
+    </script>
+
+
+</head>
+
+<body>
+    
+</body>
+</html>
